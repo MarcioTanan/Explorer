@@ -2,6 +2,16 @@
 font-family: 'Archivo', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+bpdy, input, select, textarea, button{
+  font-family: 'Poppins', sans-serif;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
   background: #e5e5e5;
@@ -35,6 +45,7 @@ header h1{
   font-size: 36px;
   line-height: 42px;
   color: white;
+  margin-bottom: 24px;
 }
 
 header p {
@@ -87,9 +98,13 @@ fieldset legend{
 }
 
 .input-wrapper input{
-  background-color: #fafafc;
+  background: #fafafc;
   border: 1px solid #e6e6f0;
   border-radius: 8px;
-  box-sizing: border-box;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #c1bccc;
 }
 
