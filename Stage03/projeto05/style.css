@@ -2,6 +2,12 @@
 font-family: 'Epilogue', sans-serif;
 */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --ff-heading:'Epilogue', sans-serif;
   --ff-texting: 'OpenSans', sans-serif;
@@ -9,6 +15,7 @@ font-family: 'Epilogue', sans-serif;
   --bg-primary: #29283e;
   --fc-primary: #ffffff;
   --fc-secondary: #bbb3e6;
+  --fc-secondary-dark: hsla(250, 100%, 11%, 1);
 
   font-size: 62.5%;
   --fs-body: 1.6rem;
@@ -23,18 +30,76 @@ body {
   font-size: var(--fs-body);
 }
 
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 header {
+  margin: 10rem 0 8rem;
   font-family: var(--ff-heading);
+  text-align: center;
 }
 
 header p {
   color: var(--fc-secondary);
   text-transform: uppercase;
 
+
+  line-height: 3.2rem;
   letter-spacing: 3px;
+  font-weight: 400;
   margin-bottom: 1.7rem;
 }
 
 header h1 {
+  font-weight: 800;
   font-size: var(--fs-heading);
+  line-height: 4.8rem;
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+  font-family: var(--ff-heading);
+}
+
+.card img{
+  height: 41.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+  font-size: var(--fs-heading);
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  
+}
+
+.card h2 span {
+  border-radius: 2rem;
+  background-color: var(--fc-primary);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--fc-secondary-dark);
+  padding: 0 1.6rem;
+  height: 3.8rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
 }
