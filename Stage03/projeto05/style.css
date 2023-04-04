@@ -1,0 +1,40 @@
+/*
+font-family: 'Epilogue', sans-serif;
+*/
+
+:root {
+  --ff-heading:'Epilogue', sans-serif;
+  --ff-texting: 'OpenSans', sans-serif;
+
+  --bg-primary: #29283e;
+  --fc-primary: #ffffff;
+  --fc-secondary: #bbb3e6;
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+  --fs-heading: 4rem;
+}
+
+body {
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  font-size: var(--fs-body);
+}
+
+header {
+  font-family: var(--ff-heading);
+}
+
+header p {
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+  margin-bottom: 1.7rem;
+}
+
+header h1 {
+  font-size: var(--fs-heading);
+}
