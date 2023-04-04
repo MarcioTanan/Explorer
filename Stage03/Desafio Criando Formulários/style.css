@@ -64,6 +64,11 @@ form {
   gap: 30px;
 }
 
+#nome{
+  display: flex;
+  gap: 22px;
+}
+
 fieldset {
   border: none;
 }
@@ -127,3 +132,32 @@ fieldset legend{
 .col-3 > div:nth-child(1) {
   width: 100%;
 }
+
+footer {
+  background: #535971;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+  margin-bottom: 100px;
+  border-top: 1px solid #d6d6d6;
+  border-radius: 0 0 20px 20px;
+}
+
+footer .button{
+  height: 56px;
+  background: #FF5374;
+  font-family: 'Staatliches';
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  border: 20px;
+}
+
+footer .button:hover {
+  background: #ff2a55;
+}
+
+
