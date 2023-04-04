@@ -78,17 +78,23 @@ ul li {
 
 }
 
+ul li+li {
+  margin-top: 3.2rem;
+}
+
+
 ul li span{
   font-weight: 800;
   font-size: 7.2rem;
   line-height: 8.0rem;
   letter-spacing: -2px;
   color: #090039;
+  padding-right: .0rem;
 }
 
 @media (min-width: 700px) {
   body{
-    padding-top: 8rem;
+    padding: 8rem;
   }
   
   main {
@@ -108,7 +114,4 @@ ul li span{
     align-items: center;
   }
 
-  ul li+li {
-    margin-top: 3.2rem;
-  }
 }
