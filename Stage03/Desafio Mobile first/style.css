@@ -63,6 +63,7 @@ main {
   width: 32.0rem;
   height: 25.0rem;
   border-radius: 2.0rem; 
+
 }
 
 .ice span {
@@ -75,4 +76,7 @@ main {
   display: inline-flex;
   align-items: center;
   width: fit-content;
+  position: absolute;
+  top: 5.2rem;
+  right: 1.0rem;
 }
