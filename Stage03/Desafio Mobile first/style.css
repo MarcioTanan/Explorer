@@ -59,7 +59,7 @@ main {
   margin-bottom: 6.0rem;
 
   animation: downtop 700ms reverse;
-}
+ }
 
 p{
   font-family: 'Palanquin' sans-serif;
@@ -103,4 +103,18 @@ p{
   position: absolute;
   right: 1.6rem;
   top: 1.6rem;
+
+  animation: topdown 700ms backwards;
 }
+ 
+@keyframes topdown {
+  
+  0%{
+     transform: translateY(-50px);
+  }
+
+  100%{
+        transform: translateY(0);
+  }
+}
+
