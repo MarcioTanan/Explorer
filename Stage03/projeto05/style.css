@@ -19,7 +19,8 @@ font-family: 'Epilogue', sans-serif;
 
   font-size: 62.5%;
   --fs-body: 1.6rem;
-  --fs-heading: 4rem;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-heading-small: clamp(3rem, 0.5rem + 3vw, 4rem);
 }
 
 body {
@@ -34,10 +35,6 @@ body {
   max-width: 33rem;
   margin: 0 auto;
 }
-
-
-
-
 
 img {
   width: 100%;
@@ -85,6 +82,7 @@ main {
   object-fit: cover;
   border-radius: 6px;
   transition: all 200ms;
+  filter: brightness(0.3);
 }
 
 .card img:hover {
@@ -96,7 +94,7 @@ main {
   position: absolute;
   bottom: 5.2rem;
   left: 2.8rem;
-  font-size: 4rem;
+  font-size: var(--fs-heading-small);
   font-weight: 800;
   display: flex;
   flex-direction: column;
@@ -143,10 +141,7 @@ main {
 }
 
 @media (min-width: 700px) {
-  :root{
-    --fs-heading: 5.6rem;
-   }
-   
+    
     .page{
       max-width: 117rem;
       padding: 0 5rem;
