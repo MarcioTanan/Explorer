@@ -18,7 +18,7 @@
   --delay-10: 20s;
   --delay-11: 22s;
   --delay-12: 24s;
-  --duration: 1s;
+  --duration: 0.5s;
 }
 
 body {
@@ -33,4 +33,129 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 4%;
+}
+
+.hole {
+  height: 17.6rem;
+  width: 21.5%;
+  background-image: url("assets/toupeira6.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  transition: all 0.1s;
+}
+
+
+.all-holes div:nth-of-type(1) {
+  animation: showMole var(--duration) ease-in-out var(--delay-02);
+}
+
+.all-holes div:nth-of-type(2) {
+  animation: showMole var(--duration) ease-in-out var(--delay-08);
+}
+
+.all-holes div:nth-of-type(3) {
+  animation: showMole var(--duration) ease-in-out var(--delay-03);
+}
+
+.all-holes div:nth-of-type(4) {
+  animation: showMole var(--duration) ease-in-out var(--delay-07);
+}
+
+.all-holes div:nth-of-type(5) {
+  animation: showMole var(--duration) ease-in-out var(--delay-06);
+}
+
+.all-holes div:nth-of-type(6) {
+  animation: showMole var(--duration) ease-in-out var(--delay-10);
+}
+
+.all-holes div:nth-of-type(7) {
+  animation: showMole var(--duration) ease-in-out var(--delay-12);
+}
+
+.all-holes div:nth-of-type(8) {
+  animation: showMole var(--duration) ease-in-out var(--delay-09);
+}
+
+.all-holes div:nth-of-type(9) {
+  animation: showMole var(--duration) ease-in-out var(--delay-04);
+}
+
+.all-holes div:nth-of-type(10) {
+  animation: showMole var(--duration) ease-in-out var(--delay-01);
+}
+
+.all-holes div:nth-of-type(11) {
+  animation: showMole var(--duration) ease-in-out var(--delay-05);
+}
+
+.all-holes div:nth-of-type(12) {
+  animation: showMole var(--duration) ease-in-out var(--delay-11);
+}
+
+
+@keyframes showMole {
+  0% {
+    background: url("./assets/toupeira0.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  17% {
+    background: url("./assets/toupeira1.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  33% {
+    background: url("./assets/toupeira2.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  50% {
+    background: url("./assets/toupeira3.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  67% {
+    background: url("./assets/toupeira4.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  83% {
+    background: url("./assets/toupeira5.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  100% {
+    background: url("./assets/toupeira0.svg") no-repeat center center;
+    background-size: contain;
+
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 16rem 4rem 4rem;
+  }
+
+  .hole {
+    height: 13.6rem;
+    width: 28%;
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 12rem 2.4rem 4rem;
+  }
+
+  .all-holes {
+    gap: 4%;
+  }
+
+  .hole {
+    height: 8rem;
+    width: 46%;
+  }
 }
