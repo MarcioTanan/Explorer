@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --delay-01: 2s;
+  --delay-02: 4s;
+  --delay-03: 6s;
+  --delay-04: 8s;
+  --delay-05: 10s;
+  --delay-06: 12s;
+  --delay-07: 14s;
+  --delay-08: 16s;
+  --delay-09: 18s;
+  --delay-10: 20s;
+  --delay-11: 22s;
+  --delay-12: 24s;
+  --duration: 1s;
+}
+
+body {
+  background: url("assets/fundo.svg") no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 24rem 16.8rem 2rem;
+}
+
+.all-holes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4%;
+}
