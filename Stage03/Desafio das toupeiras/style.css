@@ -43,7 +43,7 @@ body {
   background-position: center center;
   background-size: contain;
 
-  transition: all 0.1s;
+  transition: all 0.4s;
 }
 
 
@@ -98,7 +98,7 @@ body {
 
 @keyframes showMole {
   0% {
-    background: url("./assets/toupeira0.svg") no-repeat center center;
+    background: url("./assets/toupeira6.svg") no-repeat center center;
     background-size: contain;
   }
 
@@ -128,7 +128,7 @@ body {
   }
 
   100% {
-    background: url("./assets/toupeira0.svg") no-repeat center center;
+    background: url("./assets/toupeira6.svg") no-repeat center center;
     background-size: contain;
 
   }
