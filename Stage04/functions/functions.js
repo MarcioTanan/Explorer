@@ -10,6 +10,10 @@ if(temperature >= 37.5){
   console.log('Saudável')
 }
 
+*/
+
+
+/* 
 
 let expression = 'i'
 
@@ -25,6 +29,8 @@ switch (expression ){
     break   
 }
 */
+
+/*
 
 function calculate(number1, operator, number2) {
   let result
@@ -48,12 +54,8 @@ function calculate(number1, operator, number2) {
   }
 
   return result
-
-
-
-
-
-
 }
 
-console.log(calculate(4, '+', 8))
+console.log(calculate(4, '%', 8))
+*/
+
