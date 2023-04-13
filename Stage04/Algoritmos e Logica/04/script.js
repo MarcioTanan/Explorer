@@ -6,10 +6,12 @@ let not3 = prompt("Digite sua terceira nota: ")
 
 let sum = (Number(not1) + Number(not2) + Number(not3)) / 3
 
-let result = sum > 6
+sum = sum.toFixed(2)
 
-if (result) {
-alert("Parabéns, " + name + "! sua média foi de: " + sum.toFixed(2))
+if (sum > 6) {
+alert("Parabéns, " + name + "! sua média foi de: " + sum)
+}else if (sum < 3) {
+  alert("Reprovado")
 }else{
-  alert(name + " estude para sua prova de recuperação! Sua média foi de " + sum.toFixed(2))
+  alert(name + " estude para sua prova de recuperação! Sua média foi de " + sum)
 }
