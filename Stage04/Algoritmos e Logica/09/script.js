@@ -22,10 +22,11 @@ const pacientes = [
 ]
 
 function printPacientes(pacientes){
-  alert(`Paciente ${pacientes.name} possuio IMC de ${(pacientes.weight / ((pacientes.height/ 100) ** 2)).toFixed(2)}`)
+  return `Paciente ${pacientes.name} possuio IMC de ${(pacientes.weight / ((pacientes.height/ 100) ** 2)).toFixed(2)}`
 }
 
 for(let paciente of pacientes){
-  printPacientes(paciente)
+  let IMCmessage = printPacientes(paciente)
+  alert(IMCmessage)
 }
 
