@@ -18,9 +18,12 @@ font-family: 'Roboto', sans-serif;
   --ot-input: #02799d;
   --bd-input: rgba(73, 80, 87, 0.3);
   --tt-placeholder: rgba(73, 80, 87, 0.5);
+  --bg-input: #dce2e9;
+
  
   --tt-button: white;
   --bg-button:#02799d;
+  --bg-button-hover: #014d64;
  
   --bg-error: #f03e3e;
   --tt-error: white;
@@ -29,7 +32,11 @@ font-family: 'Roboto', sans-serif;
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #040924;
+}
+
+body, input, button{
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .container{
@@ -54,6 +61,10 @@ body{
   color: var(--tt-heading);
 }
 
+form{
+  
+}
+
 form h1 {
   margin-bottom: 3.2rem;
 }
@@ -68,7 +79,49 @@ form label {
 
 form input{
   width: 100%;
-  border: 1px solid var(--bd-input)
+  border: 1px solid var(--bd-input);
+  background: var(--bg-input);
+  padding: 1.6rem;
+  border-radius: .4rem;
 }
+
+form input:focus{
+  outline: 2px solid var(--ot-input);
+}
+
+form input::placeholder{
+  color: var(--tt-placeholder);
+}
+
+.input-wrapper + .input-wrapper{
+  margin-top: 1.6rem;
+}
+
+button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+ 
+  border-radius: .4rem;
+  border: none;
+  background-color: var(--bg-button);
+  color: var(--tt-button);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  
+  font-weight: bold;
+ 
+   cursor: pointer;
+
+   transition: .3s;
+}
+
+button:hover{
+  background: var(--bg-button-hover);
+}
+
 
 
