@@ -161,5 +161,30 @@ form button:hover{
   transform: scale(1.4);
 }
 
+.alert-error.open{
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.alert-error{
+  position: absolute;
+  background-color: var(--bg-error);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--tt-error);
+  padding: .8rem 0;
+  font-weight: bold;
+
+  opacity: 0;
+  visibility: 0;
+
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+
 
 
