@@ -20,7 +20,6 @@ function countdown(){
     countdown()
   },1000)
   
- 
 }
 
 buttonPlay.addEventListener('click', function() {
