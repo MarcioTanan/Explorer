@@ -58,6 +58,7 @@ main {
 #timer {
   font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   display: flex;
+  margin-bottom: 1.6rem;
 }
 
 #controls {
@@ -74,4 +75,5 @@ main {
 footer {
   align-self: end;
   justify-self: end;
+  padding: 0 2.2rem 2.2rem 0;
 }
