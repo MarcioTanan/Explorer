@@ -1,4 +1,4 @@
-const Modal = {
+export const Modal = {
 
   wrapper: document.querySelector('.modal-wrapper'),
   message: document.querySelector('.modal .title span'),
@@ -16,4 +16,11 @@ const Modal = {
 
 Modal.btnClose.onclick = () => {
   Modal.close()
+}
+
+window.addEventListener('keydown', handleKeyDown )
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    Modal.close()
+  }
 }
