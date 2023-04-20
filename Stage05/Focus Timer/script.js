@@ -7,39 +7,44 @@ const buttonSounOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 let minutes
+let timerTimerOut
 
-function resetControls(){
+function resetControls() {
   buttonPlay.classList.remove('hide')
   buttonPause.classList.add('hide')
   buttonSet.classList.remove('hide')
   buttonStop.classList.add('hide')
-  
+
 }
 
-function updateTimerDisplay(minutes, seconds){
+function updateTimerDisplay(minutes, seconds) {
   minutesDisplay.textContent = String(minutes).padStart(2, "0")
   secondsDisplay.textContent = String(seconds).padStart(2, '0')
 }
 
+function resetTimer() {
+  updateTimerDisplay(minutes)
+}
+
 function countdown() {
-  setTimeout(function () {
+  timerTimerOut = setTimeout(function () {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
-    
-      updateTimerDisplay(minutes, 0)
-    
-    if(minutes <= 0) {
+
+    updateTimerDisplay(minutes, 0)
+
+    if (minutes + seconds <= 0) {
       resetControls()
       return
     }
-   
+
     if (seconds <= 0) {
-      seconds = 3
-     minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
-      updateTimerDisplay(String(minutes - 1), seconds)
+      seconds = 5
+      --minutes
     }
+
     updateTimerDisplay(minutes, String(seconds - 1))
-    
+
     countdown()
   }, 1000)
 
@@ -57,13 +62,12 @@ buttonPlay.addEventListener('click', function () {
 buttonPause.addEventListener('click', function () {
   buttonPause.classList.add('hide')
   buttonPlay.classList.remove('hide')
-  buttonSet.classList.remove('hide')
-  buttonStop.classList.add('hide')
+  clearTimeout(timerTimerOut)
 })
 
 buttonStop.addEventListener('click', function () {
   resetControls()
-  
+  clearTimeout(timerTimerOut)
 })
 
 buttonSounOn.addEventListener('click', function () {
@@ -77,6 +81,6 @@ buttonSounOff.addEventListener('click', function () {
 })
 
 buttonSet.addEventListener('click', function () {
-  minutes = prompt('Quantos minutos')
+  minutes = prompt('Quantos minutos') || 0
   updateTimerDisplay(minutes, 0)
 })
