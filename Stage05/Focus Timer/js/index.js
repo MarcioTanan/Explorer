@@ -35,7 +35,7 @@ buttonPlay.addEventListener('click', function () {
 buttonPause.addEventListener('click', function () {
   controls.pause()
   timer.hold()
-  
+
 })
 
 buttonStop.addEventListener('click', function () {
@@ -60,7 +60,6 @@ buttonSet.addEventListener('click', function () {
     return
   }
 
-  minutes = newMinutes
-  timer.updateDisplay(minutes, 0)
-  timer.updateMinutes(minutes)
+  timer.updateDisplay(newMinutes, 0)
+ timer.updateMinutes(newMinutes)
 })
