@@ -51,7 +51,7 @@ export function Timer({
   }
 
   function increment() {
-    minutes = minutes < 25 ? Number(minutes) + 5 : (minutes = 25)
+    minutes = minutes < 60 ? Number(minutes) + 5 : (minutes = 60)
     updateTimerDisplay(minutes, 0)
   }
 
