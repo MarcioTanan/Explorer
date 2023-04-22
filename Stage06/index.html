@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPA</title>
-</head>
+  <link rel="stylesheet" href="pages/home.html">
+  </head>
 <body>
   <nav>
     <a href="/" onclick="route()">Home</a>
@@ -19,10 +20,10 @@
   <script>
 
     const routes = {
-      "/": "/pages/home.html",
-      "/about": "/pages/about.html",
-      "/contact": "/pages/contact.html",
-      404: "/pages/404.html",
+      "/": "Stage06/pages/home.html",
+      "/about": "Stage06/pages/about.html",
+      "/contact": "Stage06/pages/contact.html",
+      404: "Stage06/pages/404.html",
     }
 
     function route(event){
@@ -35,15 +36,20 @@
     }
 
     function handle(){
-      const {pathname} = window.location
+      const { pathname } = window.location
       const route = routes[pathname] || routes[404]
 
       fetch(route)
       .then(data => data.text())
-      .then(html => console.log(html))
+      .then(html => {
+        
+        document.querySelector('#app').innerHTML = html
+      })
 
     }
 
+      handle()
+      window.onpopstate = () => handle()
   </script>
 </body>
 </html>
