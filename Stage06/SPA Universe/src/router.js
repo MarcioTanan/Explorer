@@ -1,4 +1,4 @@
-import { nav } from './elements.js'
+import { nav } from 'Stage06/SPA Universe/src/elements.js'
 
 export default class Router {
   routes = {}
@@ -50,7 +50,7 @@ export default class Router {
         body.classList.remove('bgUniverse')
         body.classList.remove('bgExplorer')
         nav.classList.add('hide')
-        document.title = '404... Repito, 404, Câmbio!'
+        document.title = 'Ground control to Major Tom!'
         break
     }
 

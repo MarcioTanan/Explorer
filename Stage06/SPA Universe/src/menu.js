@@ -1,4 +1,4 @@
-import { home, universe, explorer } from './elements.js'
+import { home, universe, explorer } from 'Stage06/SPA Universe/src/elements.js'
 
 export default function Menu() {
   function selectHome() {

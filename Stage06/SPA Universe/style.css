@@ -41,15 +41,15 @@ body.bgExplorer {
 }
 
 body.bgHome {
-  background-image: url(/assets/mountains-universe01.png);
+  background-image: url('assets/mountains-universe01.png');
 }
 
 body.bgUniverse {
-  background-image: url(/assets/mountains-universe02.png);
+  background-image: url('assets/mountains-universe02.png');
 }
 
 body.bgExplorer {
-  background-image: url(/assets/mountains-universe03.png);
+  background-image: url('assets/mountains-universe03.png');
 }
 
 #app {
