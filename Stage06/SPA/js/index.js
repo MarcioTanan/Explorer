@@ -1,10 +1,10 @@
 
 
 const routes = {
-  "/": "Stage06/pages/home.html",
-  "/about": "Stage06/pages/about.html",
-  "/contact": "Stage06/pages/contact.html",
-  404: "Stage06/pages/404.html",
+  "/": "Stage06/SPA/pages/home.html",
+  "/about": "Stage06/SPA/pages/about.html",
+  "/contact": "Stage06/SPA/pages/contact.html",
+  404: "Stage06/SPA/pages/404.html",
 }
 
 function route(event){
