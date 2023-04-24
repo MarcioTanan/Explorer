@@ -1,32 +1,32 @@
 
-export class Favorites{
-  constructor(root){
+export class Favorites {
+  constructor(root) {
     this.root = document.querySelector(root)
     this.load()
   }
 
-  load(){
-     this.entries = [
+  load() {
+    this.entries = [
       {
-      login: 'maykbrito',
-      name: "Mayk Brito",
-      public_repos: "76",
-      followers: "120000",
-    },
+        login: 'maykbrito',
+        name: "Mayk Brito",
+        public_repos: "76",
+        followers: "120000",
+      },
 
-    {
-      login: 'diego3g',
-      name: "Diego Fernandes",
-      public_repos: "48",
-      followers: "122503"
-    }
-  ]
-  this.entries = this.entries
+      {
+        login: 'diego3g',
+        name: "Diego Fernandes",
+        public_repos: "48",
+        followers: "122503"
+      }
+    ]
+    this.entries = this.entries
   }
 }
 
-export class FavoritesView extends Favorites{
-  constructor(root){
+export class FavoritesView extends Favorites {
+  constructor(root) {
     super(root)
 
     this.tbody = this.root.querySelector('table tbody')
@@ -34,21 +34,27 @@ export class FavoritesView extends Favorites{
     this.update()
   }
 
-  update(){
+  update() {
     this.removeAllTr()
 
-   
-    
-  this.entries.forEach(user => {
-    const row = this.createRow()
-   
-    row.querySelector(".user img").src = `https://github.com/${user.login}.png`
 
-    this.tbody.append
-  })
-   }
 
-   createRow(){
+    this.entries.forEach(user => {
+      const row = this.createRow()
+
+      row.querySelector(".user img").src = `https://github.com/${user.login}.png`
+
+      row.querySelector(".user img").alt = `Imagem de ${user.name}`
+      row.querySelector(".user p").textContent = user.name
+      row.querySelector(".user span").textContent = user.login
+      row.querySelector(".repositories").textContent = user.public_repos
+      row.querySelector(".followers").textContent = user.followers
+
+      this.tbody.append(row)
+    })
+  }
+
+  createRow() {
     const tr = document.createElement('tr')
 
     tr.innerHTML = `
@@ -70,12 +76,12 @@ export class FavoritesView extends Favorites{
   </td>
     `
     return tr
-   }
-
-  removeAllTr(){
-        this.tbody.querySelectorAll('tr').forEach((tr) =>{
-      tr.remove()
-    } )
   }
-  
+
+  removeAllTr() {
+    this.tbody.querySelectorAll('tr').forEach((tr) => {
+      tr.remove()
+    })
+  }
+
 }
