@@ -1,17 +1,32 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+
+    return fetch(endpoint)
+      .then(data => data.json())
+      .then(({ login, name, public_repos, followers }) => ({
+        login,
+        name,
+        public_repos,
+        followers,
+      }))
+  }
+}
+
 
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
-  }
 
+    GithubUser.search('sonrenato1506').then(user => console.log(user))
+  }
   load() {
-    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) ||[]
-  
-   
+    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
+
   }
 
-  delete(user){
+  delete(user) {
 
     const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
 
@@ -48,13 +63,13 @@ export class FavoritesView extends Favorites {
       row.querySelector(".followers").textContent = user.followers
       row.querySelector(".remove").onclick = () => {
         const isOk = confirm("Tem certeza que deseja cancelar essa linha?")
-        if(isOk){
-            this.delete(user)
+        if (isOk) {
+          this.delete(user)
         }
       }
-    
+
       this.tbody.append(row)
-  })
+    })
   }
 
 
