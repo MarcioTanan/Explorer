@@ -19,12 +19,25 @@ export class Favorites {
     this.root = document.querySelector(root)
     this.load()
 
-    GithubUser.search('sonrenato1506').then(user => console.log(user))
+       GithubUser.search('sonrenato1506').then(user => console.log(user))
   }
+
   load() {
     this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
-
   }
+
+  
+  async add(username){
+    try{
+      const user = await GithubUser.search(username)
+
+      if(user.login === undefined){
+        throw new Error('Usuário não encontrado!')
+      }
+    }catch(error){
+      alert(error.message)
+    }
+   }
 
   delete(user) {
 
@@ -43,6 +56,16 @@ export class FavoritesView extends Favorites {
     this.tbody = this.root.querySelector('table tbody')
 
     this.update()
+    this.onadd()
+  }
+
+  onadd() {
+    const addButton = this.root.querySelector('.search button')
+    addButton.onclick = () => {
+      const {value} = this.root.querySelector('.search input')
+
+      this.add(value)
+    }
   }
 
 
