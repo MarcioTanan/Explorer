@@ -21,9 +21,17 @@ export class Favorites {
         followers: "122503"
       }
     ]
-    this.entries = this.entries
+   
+  }
+
+  delete(user){
+
+    const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
+
+    console.log(filteredEntries)
   }
 }
+
 
 export class FavoritesView extends Favorites {
   constructor(root) {
@@ -33,6 +41,7 @@ export class FavoritesView extends Favorites {
 
     this.update()
   }
+
 
   update() {
     this.removeAllTr()
@@ -49,10 +58,18 @@ export class FavoritesView extends Favorites {
       row.querySelector(".user span").textContent = user.login
       row.querySelector(".repositories").textContent = user.public_repos
       row.querySelector(".followers").textContent = user.followers
-
+      row.querySelector(".remove").onclick = () => {
+        const isOk = confirm("Tem certeza que deseja cancelar essa linha?")
+        if(isOk){
+            this.delete(user)
+        }
+      }
+    
       this.tbody.append(row)
-    })
+  })
   }
+
+
 
   createRow() {
     const tr = document.createElement('tr')
