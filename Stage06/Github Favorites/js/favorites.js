@@ -13,7 +13,33 @@ export class FavoritesView extends Favorites{
 
   update(){
     this.removeAllTr()
-  }
+
+    
+   }
+
+   createRow(){
+    const tr = document.createElement('tr')
+
+    tr.innerHTML = `
+    <td class="user">
+    <img src="https://github.com/maykbrito.png" alt="Imagem de maikbrito">
+    <a href="https://github.com/maykbrito" target="_blank">
+      <p>Mayk Brito</p>
+      <span>maykbrito</span>
+    </a>
+  </td>
+  <td class="repositories">
+    76
+  </td>
+  <td class="followers">
+    9589
+  </td>
+  <td>
+    <button class="remove">&times;</button>
+  </td>
+    `
+    return tr
+   }
 
   removeAllTr(){
     const tbody = this.root.querySelector('table tbody')
