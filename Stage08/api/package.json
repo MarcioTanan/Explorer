@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "start": "node ../api/src/server.js"
+    "start": "node ../api/src/server.js",
+    "dev": "nodemon ../api/src/server"
+
   },
   "author": "Marcio Tanan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
