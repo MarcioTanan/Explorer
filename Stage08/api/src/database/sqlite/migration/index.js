@@ -1,3 +1,4 @@
+const APIPlugin = require('webpack/lib/APIPlugin');
 const sqliteConnection = require('../../sqlite')
 const createUsers = require('./createUsers')
 
@@ -8,5 +9,6 @@ async function migrationRun(){
 
   sqliteConnection()
   .then(db => db.exec(schemas)).catch(error => console.error(error));
-
 }
+
+module.exports = migrationRun;
