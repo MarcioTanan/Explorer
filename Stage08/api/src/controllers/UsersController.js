@@ -40,15 +40,21 @@ class UsersController {
 
     const userWithUpdatedEmail = await database.get('SELECT * FROM users WHERE email = (?)', [email])
 
-    if(userWithUpdatedEmail && userWithUpdatedEmail.id !== id) {
+    if(userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id) {
         throw new AppError('Este e-mail já está em uso.')
     }
 
     user.name = name;
     user.email = email;
 
-    await database.run('UPDATE users SET name = ?, email = ?, update_at = ? WHERE id = ?, [user.name, user.email, new Date(), id]')
+    await database.run(`UPDATE users SET name = ?, email = ?, updated_at = ? WHERE id = ?`, [user.name, user.email, new Date(), user.id]);
+    
+    
     return response.status(200).json();
+
+
   }
+  
+
 }
-module.exports = UsersController
+module.exports = UsersController;
