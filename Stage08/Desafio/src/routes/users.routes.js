@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const UsersController = require("../controllers/UsersController"); //importei a classe UsersController para uso neste arquivo, e guardei em uma constante usando seu prório nome.
+const UsersController = require("../controllers/UsersController"); //importei a classe UsersController para uso neste arquivo, e guardei em uma constante usando seu próprio nome.
 
 const usersRoutes = Router();
 
