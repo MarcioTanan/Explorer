@@ -1,33 +1,43 @@
-import {Container, Links} from "./styles.js";
+import { Container, Links,Content } from "./styles.js";
 
-import {Tag} from '../../components/Tag';
-import {Button} from '../../components/Button';
-import {Header} from '../../components/Header';
-import {Section} from '../../components/Section';
-import {ButtonText} from '../../components/ButtonText';
+import { Tag } from "../../components/Tag";
+import { Button } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { Section } from "../../components/Section";
+import { ButtonText } from "../../components/ButtonText";
 
-export function Details(){
-  return(
+export function Details() {
+  return (
     <Container>
-    <Header/>
+      <Header />
 
-    <ButtonText title="Excluir nota"/>
-      
-    
+      <main>
+        <Content>
+          <ButtonText title="Excluir nota" />
 
-   <Section title="Links úteis">
-    <Links>
-      <li><a href="#">https://rocketseat.com.br</a></li>
-      <li><a href="#">https://rocketseat.com.br</a></li>
-    </Links>
-  </Section>
+          <h1>Introdução ao React</h1>
 
-  <Section title="Marcadores">
-      <Tag title="express"/>
-      <Tag title="nodejs"/>
-  </Section>
-    
-    <Button title='Voltar'/>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nesciunt perferendis dolore doloribus dolorum officia tenetur, nisi quisquam eos atque aperiam, quas rem facilis beatae voluptatibus fugit ratione reiciendis explicabo.</p>
+
+          <Section title="Links úteis">
+            <Links>
+              <li>
+                <a href="#">https://rocketseat.com.br</a>
+              </li>
+              <li>
+                <a href="#">https://rocketseat.com.br</a>
+              </li>
+            </Links>
+          </Section>
+
+          <Section title="Marcadores">
+            <Tag title="express" />
+            <Tag title="nodejs" />
+          </Section>
+
+          <Button title="Voltar" />
+        </Content>
+      </main>
     </Container>
-  )
+  );
 }
