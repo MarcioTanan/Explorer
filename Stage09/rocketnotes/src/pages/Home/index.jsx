@@ -1,6 +1,7 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from "./styles";
 
 import { Header } from "../../components/Header";
+import { ButtonText } from "../../components/ButtonText";
 
 export function Home() {
   return (
@@ -9,23 +10,25 @@ export function Home() {
         <h1>Rocketnotes</h1>
       </Brand>
 
-      <Header/>
+      <Header />
 
       <Menu>
-
+        <li>
+          <ButtonText title="Todos" />
+        </li>
+        <li>
+          <ButtonText title="React" />
+        </li>
+        <li>
+          <ButtonText title="Nodejs" />
+        </li>
       </Menu>
 
-      <Search>
+      <Search></Search>
 
-      </Search>
+      <Content></Content>
 
-      <Content>
-        
-      </Content>
-
-      <NewNote>
-      
-      </NewNote>
+      <NewNote></NewNote>
     </Container>
   );
 }
