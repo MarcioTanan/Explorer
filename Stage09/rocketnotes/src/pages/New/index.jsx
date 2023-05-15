@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Form } from "./styles";
 
-
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
@@ -12,6 +11,7 @@ import {Link} from 'react-router-dom'
 
 
 export function New() {
+ 
   const [links, setLinks] = useState([])
   const [newLink, setNewLink] = useState("")
   
