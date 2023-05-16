@@ -13,6 +13,20 @@ import { ButtonText } from "../../components/ButtonText";
 
 export function Home() {
   const [tags, setTags] = useState([])
+  const [tagsSelected, setTagsSelected] = useState([])
+
+  function handleTagsSelected(tagName){
+    const alredySelected = tagsSelected.includes(tagName)
+
+    if(alredySelected){
+      const filteredTags = tagsSelected.filter(tag => tag !== tagName)
+      setTagsSelected(filteredTags)
+    }else{
+      setTagsSelected(prevState =>[...prevState, tagName])
+
+    }
+
+  }
 
   
   
@@ -38,13 +52,17 @@ export function Home() {
           <li>
             <ButtonText 
             title="Todos" 
-            isActive/>
+            onClick = {() => handleTagsSelected("all")}
+            isActive={tagsSelected.length === 0}
+            />
           </li>
           {
             tags && tags.map(tag => (
             <li key={String(tag.id)}>
               <ButtonText 
               title={tag.name} 
+              onClick = {() => handleTagsSelected(tag.name)}
+              isActive={tagsSelected.includes(tag.name)}
               />
             </li>
             ))
