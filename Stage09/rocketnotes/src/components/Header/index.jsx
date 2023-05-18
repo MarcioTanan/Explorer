@@ -13,7 +13,7 @@ const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` :
 
   return(
     <Container>
-      <Profile to="/profile">
+      <Profile to="/profile">    
       <img
        src={avatarUrl}
        alt={user.name}/>
