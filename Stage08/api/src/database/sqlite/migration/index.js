@@ -1,4 +1,3 @@
-const APIPlugin = require('webpack/lib/APIPlugin');
 const sqliteConnection = require('../../sqlite')
 const createUsers = require('./createUsers')
 
