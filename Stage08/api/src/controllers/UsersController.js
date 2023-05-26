@@ -1,15 +1,18 @@
 
 const { hash, compare } = require('bcryptjs');
 const AppError = require('../utils/AppError');
+
+const UserRepository = require('../repositories/UserRepository')
 const sqliteConnection = require('../database/sqlite')
 
 class UsersController {
  async create(request, response) {
     const { name, email, password } = request.body;
 
-    const database = await sqliteConnection();
-    const checkUserExist = await database.get('SELECT * FROM users WHERE email = (?)', [email]);
+    const userRepository = new UserRepository()
 
+    const database = await sqliteConnection();
+    const checkUserExist = userRepository()
 
 
     if(checkUserExist){
